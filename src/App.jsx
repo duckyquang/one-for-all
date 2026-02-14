@@ -1,23 +1,16 @@
 import React from 'react'
-import Hero from './components/Hero'
-import Reviews from './components/Reviews'
-import Features from './components/Features'
-import FinalCTA from './components/FinalCTA'
-import Contact from './components/Contact'
-import Particles from './components/Particles'
+import { Routes, Route } from 'react-router-dom'
+import Landing from './components/Landing'
+import PrivacyPolicy from './pages/PrivacyPolicy'
+import TermsConditions from './pages/TermsConditions'
 
 function App() {
   return (
-    <div className="min-h-screen bg-black relative">
-      <Particles />
-      <div className="relative z-10">
-        <Hero />
-        <Reviews />
-        <Features />
-        <FinalCTA />
-        <Contact />
-      </div>
-    </div>
+    <Routes>
+      <Route path="/" element={<Landing />} />
+      <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+      <Route path="/terms-conditions" element={<TermsConditions />} />
+    </Routes>
   )
 }
 
